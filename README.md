@@ -7,9 +7,9 @@ A standalone Python tool for generating customized drone operation checklists an
 - Generate compact A5 checklists for field use
 - Generate detailed A4 procedure manuals
 - Filter procedures based on:
-  - Operation type (VLOS, BVLOS, EVLOS)
-  - Drone platform (DJI, Autel, Other)
-  - Number of drones (Single, Multiple)
+  - Operation type (VLOS, BVLOS with/without observer, Night operations)
+  - Drone platform (DJI, Ebee X, UoB Glider, Papa Smurf, CoDrone, Parrot Anafi)
+  - Number of drones (Single, Multiple, Swarm)
 - Professional PDF formatting with custom fonts and branding
 
 ## Requirements
@@ -37,12 +37,12 @@ python generate_checklist.py
 
 Specify operation parameters:
 ```bash
-python generate_checklist.py --operation BVLOS --drone AUTEL --count MULTIPLE
+python generate_checklist.py --operation BVLOS_NO_VO --drone EBEE --count MULTIPLE
 ```
 
 Short form:
 ```bash
-python generate_checklist.py -o EVLOS -d DJI -c SINGLE
+python generate_checklist.py -o NIGHT_VLOS -d PARROT -c SINGLE
 ```
 
 ### List Available Options
