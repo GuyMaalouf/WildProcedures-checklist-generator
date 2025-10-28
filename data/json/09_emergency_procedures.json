@@ -1,0 +1,53 @@
+{
+    "title": "Emergency Procedures",
+    "color": [255, 0, 0],
+    "items": [
+        {
+            "section": "Emergency Procedures",
+            "procedures": [
+                {
+                    "checklist_entry": "Aircraft close: Activate kill switch",
+                    "procedure_description": "This will make the drone fall out of the sky.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Threatening wildlife: Get in car, RTH",
+                    "procedure_description": "Get in the car first, keeping the controller outside if possible. Then, RTH.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Operational volume breached: Kill switch, call ATC",
+                    "procedure_description": "Activate kill switch and communicate with ATC (+254 798 984 005). Inform ATC of your situation, drone size, location, direction, height, speed, and remaining battery.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Loss of control/fly-away: Try control, kill switch, call ATC",
+                    "procedure_description": "Try regaining control by lifting the controller overhead and orienting the antenna towards the UAS. If unsuccessful, activate kill switch and call ATC (+254 798 984 005). Share your situation, drone size, location, direction, height, speed, and remaining battery.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Bush fire: Call radio room",
+                    "procedure_description": "Call the radio room at +254 723 312 673.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Crew unfit: RTH, first aid, call radio room",
+                    "procedure_description": "RTH and provide first aid. Call the radio room at +254 723 312 673. Keep calm and communicate clearly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

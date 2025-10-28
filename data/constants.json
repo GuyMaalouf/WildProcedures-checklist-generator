@@ -1,0 +1,22 @@
+{
+    "operation_types": [
+        ["VLOS", "VLOS"],
+        ["BVLOS_NO_VO", "BVLOS 1km (No Observer)"],
+        ["BVLOS_VO", "BVLOS 2km (Observer)"],
+        ["NIGHT_VLOS", "Night VLOS"],
+        ["NIGHT_BVLOS", "Night BVLOS"]
+    ],
+    "drone_platforms": [
+        ["DJI", "DJI"],
+        ["EBEE", "Ebee X"],
+        ["UOB_GLIDER", "UoB Glider"],
+        ["SMURF", "Papa Smurf"],
+        ["CODRONE", "CoDrone"],
+        ["PARROT", "Parrot Anafi"]
+    ],
+    "number_of_drones": [
+        ["SINGLE", "Single Drone"],
+        ["MULTIPLE", "Multiple Drones"],
+        ["SWARM", "Swarm of Drones"]
+    ]
+}
