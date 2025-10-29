@@ -207,6 +207,9 @@ If you use WildProcedures in your research or project, please cite:
 }
 ```
 
+## 💰 Funding
+This work was funded by the European Union’s Horizon Europe research and innovation funding programme under the Marie Skłodowska-Curie grant agreement no. 101071224.
+
 ## Support
 
 For issues or questions, please refer to the JSON data files for procedure content or the script comments for technical details.
