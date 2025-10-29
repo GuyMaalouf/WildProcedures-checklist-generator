@@ -193,6 +193,20 @@ Replace `media/WD_logo.png` with your own logo (recommended size: 28mm width at 
 
 This tool is provided as-is for drone operation planning and safety purposes.
 
+## 📚 Citation
+
+If you use WildProcedures in your research or project, please cite:
+
+```bibtex
+@software{wildops2025,
+  author = {Maalouf, Guy},
+  title = {WildOps: Wildlife Conservation Drone Operations Management System},
+  year = {2025},
+  publisher = {GitHub},
+  url = {https://github.com/GuyMaalouf/WildProcedures-checklist-generator/}
+}
+```
+
 ## Support
 
 For issues or questions, please refer to the JSON data files for procedure content or the script comments for technical details.
