@@ -1,4 +1,4 @@
-# Drone Operations Checklist Generator
+# WildProcedures: The Drone Operations Checklist Generator
 
 A standalone Python tool for generating customized drone operation checklists and procedure manuals in PDF format.
 
