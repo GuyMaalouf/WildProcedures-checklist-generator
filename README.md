@@ -198,9 +198,9 @@ This tool is provided as-is for drone operation planning and safety purposes.
 If you use WildProcedures in your research or project, please cite:
 
 ```bibtex
-@software{wildops2025,
+@software{wildprocedures2025,
   author = {Maalouf, Guy},
-  title = {WildOps: Wildlife Conservation Drone Operations Management System},
+  title = {WildProcedures: The Drone Operations Checklist Generator},
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/GuyMaalouf/WildProcedures-checklist-generator/}
