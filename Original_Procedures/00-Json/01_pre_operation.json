@@ -1,0 +1,68 @@
+{
+    "title": "Pre-Operation",
+    "color": [192, 192, 192],
+    "items": [
+        {
+            "section": "3rd Parties",
+            "procedures": [
+                {
+                    "checklist_entry": "Notify ATC (+254 798 984 005)",
+                    "procedure_description": "State the following: Drone fight request. Request no objections to [VLOS/BVLOS] drone operations within the Ol Pejeta Conservancy,  [East/West] of the [Ewaso Nyiro] River, not above [INSERT] feet above ground level,  between [INSERT i.e. 14.30] and [INSERT] local time. My contact number is [INSERT]. I will call back on completion.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Notify Radio Room (+254 723 312 673)",
+                    "procedure_description": "Provide planned locations (using patrol blocks) and times.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Operational Environment",
+            "procedures": [
+                {
+                    "checklist_entry": "Review Weather Forecast (wilddrone.droneweb.dk/weather_check)",
+                    "procedure_description": "Ensure temperature is between -10° to 40° C, wind speed is less than 10 m/s, rain is up to light drizzle, visibility is more than 5km, and Kp-index is a maximum of 5.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Ensure Daytime Mapping Completed",
+                    "procedure_description": "Ensure the operation has been mapped during the day prior to it taking place at night.",
+                    "operation_types": ["NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Crew",
+            "procedures": [
+                {
+                    "checklist_entry": "Assign Crew Roles",
+                    "procedure_description": "Ensure the crew is aware of their roles and responsibilities.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Packing",
+            "procedures": [
+                {
+                    "checklist_entry": "Complete Packing Checklist",
+                    "procedure_description": "Ensure all items on the packing checklist are packed and ready.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

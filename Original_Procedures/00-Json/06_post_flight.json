@@ -1,0 +1,46 @@
+{
+    "title": "Post-Flight",
+    "color": [127, 0, 255],
+    "items": [
+        {
+            "section": "Post-Flight Operations",
+            "procedures": [
+                {
+                    "checklist_entry": "(Optional) Stop on-board recording",
+                    "procedure_description": "Stop the on-board recording after landing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Remove batteries and SD card",
+                    "procedure_description": "Remove the battery and the SD card from the drone.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Inspect UAS",
+                    "procedure_description": "Check for cracks and damage. Ensure propellers spin smoothly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Stop GoPro recording",
+                    "procedure_description": "Stop the GoPro recording after landing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Notify ATC if operations are complete",
+                    "procedure_description": "Inform ATC that operations are done if no more flights are planned.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

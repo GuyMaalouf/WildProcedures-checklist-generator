@@ -1,0 +1,164 @@
+{
+    "title": "First Flight",
+    "color": [0, 204, 204],
+    "items": [
+        {
+            "section": "GoPro",
+            "procedures": [
+                {
+                    "checklist_entry": "Verify GoPro (battery, time, settings), then start recording and announce operation details.",
+                    "procedure_description": "Configure the camera to 1080p at 25 fps with a visible timestamp. Clearly state the operation number, flight number, date, time, crew roles, and mission objective.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Operational Environment",
+            "procedures": [
+                {
+                    "checklist_entry": "Assess environment (weather, airspace and topography)",
+                    "procedure_description": "Assess weather (no high winds, good visibility, no incoming rain, no low clouds.). Review no-fly zones, NOTAMs (https://metar-taf.com/notams/HKNA), and topographic hazards.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Identify direction of north",
+                    "procedure_description": "Use a compass or suitable tool to find north.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Equipment",
+            "procedures": [
+                {
+                    "checklist_entry": "Power on the Controller, and confirm controller mode",
+                    "procedure_description": "Power on the controller, and confirm the controller mode (e.g., Mode 1 or 2).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Conduct UAS inspection, and insert a new Battery & SD card",
+                    "procedure_description": "Check for cracks, damage, or loose components. Ensure propellers rotate smoothly with no visible defects.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Power on the UAS, check failsafes, errors, GPS fix, and RSSI strength:",
+                    "procedure_description": "Set failsafes: RTH (Return to Home), RTH altitude, max distance, max altitude. Check for errors (e.g. calibration), GPS fix (at least 6 satellites) and strong RSSI.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Switch light strobes on",
+                    "procedure_description": "Ensure UAS strobes are switched on.",
+                    "operation_types": ["NIGHT_VLOS","NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Position the landing mat away from the pilot, and ensure team is behind the pilot",
+                    "procedure_description": "Place the landing pad at a safe distance (at least 5 meters) to minimise risk and ensure clear takeoffs and landings.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Position the landing mat away from the pilot",
+                    "procedure_description": "Place the landing pad at a safe distance to minimize risk and ensure clear takeoffs and landings.",
+                    "operation_types": ["NIGHT_VLOS","NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Ensure vertical separation",
+                    "procedure_description": "If multiple UAS are operating, coordinate vertical separation and set maximum altitude to maintain safe distances.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["MULTIPLE", "SWARM"]
+                }
+            ]
+        },
+        {
+            "section": "Safety Briefing",
+            "procedures": [
+                {
+                    "checklist_entry": "Confirm mission plan, check crew roles and safety vests",
+                    "procedure_description": "Discuss the flight path, waypoints, and areas of interest with the team, confirm crew is wearing safety vests and understands roles.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Confirm mission plan, check crew roles",
+                    "procedure_description": "Discuss the flight path, waypoints, and areas of interest with the team, confirm crew understands roles.",
+                    "operation_types": ["NIGHT_VLOS","NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Assign evacuation car seats",
+                    "procedure_description": "Ensure each evacuation car seat is allocated and free of clutter in case of an emergency.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Confirm 'IMSAFE' readiness",
+                    "procedure_description": "Ensure no team member is suffering from Illness, Medication, Stress, Alcohol, Fatigue, or Emotion (IMSAFE).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Review contingency and emergency procedures",
+                    "procedure_description": "Make certain the pilot and assistant pilot are fully confident with contingency actions and emergency protocols.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Final Checks",
+            "procedures": [
+                {
+                    "checklist_entry": "Team go/no-go decision",
+                    "procedure_description": "Team agrees to proceed: no ground risks (wildlife, uninvolved people), no air risks (drones, aircraft), and team is IMSAFE.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Notify nearby pilots about take-off",
+                    "procedure_description": "Ensure no objections from nearby pilots before take-off.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["MULTIPLE"]
+                },
+                {
+                    "checklist_entry": "Announce 'TAKING-OFF', then take off and move away from pilot",
+                    "procedure_description": "Maintain a 1:1 height-distance ratio during take-off.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Verify flight performance away from pilot",
+                    "procedure_description": "Ensure UAS is at a safe distance. Fly forward, backward, left, right, and verify expected behavior.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

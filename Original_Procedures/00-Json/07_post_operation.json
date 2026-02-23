@@ -1,0 +1,46 @@
+{
+    "title": "Post-Operation",
+    "color": [192, 192, 192],
+    "items": [
+        {
+            "section": "Post-Operation Tasks",
+            "procedures": [
+                {
+                    "checklist_entry": "Notify ATC and Ol Pejeta comms room",
+                    "procedure_description": "Inform ATC and Ol Pejeta comms room after the operation.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Backup and format SD cards",
+                    "procedure_description": "Backup SD cards on external drives using the naming convention (2025MMDD_WDXX_N_Pilot). Then, format the SD cards.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Recharge or storage charge batteries",
+                    "procedure_description": "Recharge or storage charge the batteries after the operation.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Document the flight",
+                    "procedure_description": "Record the flight details in the Drone Logbook and KFL flight logs.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Report incidents or accidents",
+                    "procedure_description": "Record and report any incidents or accidents.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

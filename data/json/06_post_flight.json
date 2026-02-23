@@ -1,0 +1,46 @@
+{
+    "title": "Post-Flight",
+    "color": [127, 0, 255],
+    "items": [
+        {
+            "section": "Post-Flight Operations",
+            "procedures": [
+                {
+                    "checklist_entry": "(Optional) Stop on-board recording",
+                    "procedure_description": "After landing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Battery & SD card removed",
+                    "procedure_description": "Store in appropriate locations.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "UAS inspected (cracks, propellers)",
+                    "procedure_description": "Check for cracks and verify propellers spin smoothly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "GoPro recording stopped",
+                    "procedure_description": "After landing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "If no more flights planned: Inform field safety officer",
+                    "procedure_description": "If no more flights are planned.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

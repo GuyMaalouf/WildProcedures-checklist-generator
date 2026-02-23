@@ -1,0 +1,39 @@
+{
+    "title": "Emergency Procedures",
+    "color": [255, 0, 0],
+    "items": [
+        {
+            "section": "Emergency Procedures",
+            "procedures": [
+                {
+                    "checklist_entry": "Aircraft close: kill switch",
+                    "procedure_description": "The drone will fall out of the sky, but this is better than a mid-air collision.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Threatening wildlife: get in car, RTH, controller out window",
+                    "procedure_description": "Keep the controller outside if possible to maintain signal.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Fly-away: orient antenna overhead, switch flight mode, kill switch, call ATC Tower (+254 116 388 564)",
+                    "procedure_description": "If switching flight mode fails, use kill switch. Inform ATC Tower of drone size, location, direction, height, speed, and remaining battery.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Crew unfit: RTH, first aid, call radio room (+254 723 312 673)",
+                    "procedure_description": "Provide first aid. Keep calm and communicate clearly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

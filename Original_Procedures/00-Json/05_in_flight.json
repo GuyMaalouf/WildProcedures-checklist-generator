@@ -1,0 +1,60 @@
+{
+    "title": "In-Flight",
+    "color": [128, 255, 0],
+    "items": [
+        {
+            "section": "Flight Operations",
+            "procedures": [
+                {
+                    "checklist_entry": "(Optional) Upload waypoint mission",
+                    "procedure_description": "Upload the waypoint mission to the drone.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "(Optional) Start recording",
+                    "procedure_description": "Start recording the flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Monitor weather conditions",
+                    "procedure_description": "Continuously monitor weather conditions (wind, rain, visibility) during the flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Monitor UAS status",
+                    "procedure_description": "Monitor UAS parameters: battery, RSSI, GPS, altitude, distance, speed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Monitor transmitter battery",
+                    "procedure_description": "Check the remaining battery on the transmitter.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Monitor air traffic",
+                    "procedure_description": "Continuously monitor air traffic on frequency 124.3 MHz and FlightRadar24.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Announce before landing",
+                    "procedure_description": "Inform everyone in the operational area before landing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

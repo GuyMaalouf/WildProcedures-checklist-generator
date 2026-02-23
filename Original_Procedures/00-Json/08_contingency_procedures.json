@@ -1,0 +1,81 @@
+{
+    "title": "Contingency Procedures",
+    "color": [255, 153, 51],
+    "items": [
+        {
+            "section": "Contingency Procedures",
+            "procedures": [
+                {
+                    "checklist_entry": "Low battery/high drain: RTH or land",
+                    "procedure_description": "Check battery level. If sufficient, Return to Home (RTH). If not, land the drone slowly. If close to home, perform a manual landing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "High-wind: Lower altitude, RTH or land",
+                    "procedure_description": "Lower drone altitude. If possible, RTH. If not, land the drone slowly. If the drone exits flight geometry, follow Emergency E03.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Aircraft approaching: Lower altitude (Switch to Sports mode)",
+                    "procedure_description": "Lower the drone to a safe altitude (below 30m AGL).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Wildlife approaching: RTH, get in car",
+                    "procedure_description": "RTH and get in the car. Keep the controller outside the car to maintain control.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "UAV warnings/errors: RTH or land",
+                    "procedure_description": "If possible, RTH. If not, land the drone slowly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Communication link issues: Orient antenna, RTH",
+                    "procedure_description": "Lift the controller overhead and orient the antenna towards the UAS. RTH. Consider driving towards the UAS.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Poor weather: RTH",
+                    "procedure_description": "RTH in case of rain, wind, or poor visibility.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Crew unwell: RTH",
+                    "procedure_description": "RTH. Keep calm and communicate clearly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "3rd party approaching: Avoid overflying, assisstant pilot to communicate and avoid distraction",
+                    "procedure_description": "Avoid overflying the 3rd party, assistant communicates to avoid distracting the RPIC.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Flight geography breached: RTH or follow emergency",
+                    "procedure_description": "If the UAV is under control, RTH. If not, follow Emergency E04.",
+                    "operation_types": ["BVLOS_NO_VO", "BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

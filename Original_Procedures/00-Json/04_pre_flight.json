@@ -1,0 +1,98 @@
+{
+    "title": "Subsequent-Flight",
+    "color": [0, 128, 255],
+    "items": [
+        {
+            "section": "GoPro",
+            "procedures": [
+                {
+                    "checklist_entry": "Verify GoPro (battery, time, settings), then start recording and announce operation details.",
+                    "procedure_description": "Configure the camera to 1080p at 25 fps with a visible timestamp. Clearly state the operation number, flight number, date, time, crew roles, and mission objective.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Equipment",
+            "procedures": [
+                {
+                    "checklist_entry": "Power on the Controller",
+                    "procedure_description": "Power on the controller.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Insert a new Battery & SD card",
+                    "procedure_description": "Verify the remaining battery for both the UAS and the controller. Insert a new SD card into the drone.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Power on UAS, check for errors, GPS fix, and RSSI strength",
+                    "procedure_description": "Check for errors (e.g., calibration). Ensure GPS fix (at least 6 satellites) and strong RSSI.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },                
+                {
+                    "checklist_entry": "Check communications and VHF",
+                    "procedure_description": "Verify inter-team communication channels (mobile/walkie-talkie) and VHF radio.",
+                    "operation_types": ["BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Final Checks",
+            "procedures": [
+                {
+                    "checklist_entry": "Assess weather conditions",
+                    "procedure_description": "Pilot evaluates weather safety: no high winds, good visibility, no incoming rain, no low clouds.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Confirm mission plan and brief team",
+                    "procedure_description": "Discuss the flight path, waypoints, and areas of interest with the team.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Team go/no-go decision",
+                    "procedure_description": "Team agrees to proceed: no ground risks (wildlife, uninvolved people), no air risks (drones, aircraft), and team is IMSAFE.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Notify nearby pilots about take-off",
+                    "procedure_description": "Ensure no objections from nearby pilots before take-off.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["MULTIPLE"]
+                },
+                {
+                    "checklist_entry": "Announce 'TAKING-OFF', then take off and move away from pilot",
+                    "procedure_description": "Maintain a 1:1 height-distance ratio during take-off.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Verify flight performance away from pilot",
+                    "procedure_description": "Ensure UAS is at a safe distance. Fly forward, backward, left, right, and verify expected behavior.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "title": "Packing",
+    "color": [192, 192, 192],
+    "items": [
+        {
+            "section": "UAS Operation",
+            "procedures": [
+                {
+                    "checklist_entry": "Correct Mission Checklist",
+                    "procedure_description": "Ensure the checklist corresponds to your mission by checking the top banner. If it is not, generate a new one on WildOps (wilddrone.droneweb.dk).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "UAS, Spare UAS, and Controller (with maps downloaded offline)",
+                    "procedure_description": "Ensure the UAS and its controller are packed, and that the offline maps are downloaded on the controller.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Charged UAS Batteries, and spare batteries",
+                    "procedure_description": "Ensure the UAS batteries are charged and packed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Empty SD Cards for UAS",
+                    "procedure_description": "Ensure empty SD cards for the UAS are packed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "GoPro and Accessories",
+                    "procedure_description": "Ensure the GoPro, its battery, spare batteries, and empty SD card are packed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Safety Vests (2)",
+                    "procedure_description": "Ensure that 2 safety vests are packed (for pilot and assistant pilot).",
+                    "operation_types": ["VLOS","BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "VHF Radio and Communication Devices",
+                    "procedure_description": "Ensure that the VHF radio is packed with its battery and antenna, along with inter-team communication devices (walkie-talkie / mobile).",
+                    "operation_types": ["BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "ADS-B In Receiver",
+                    "procedure_description": "Ensure that the ADS-B Airtrack system is packed.",
+                    "operation_types": ["BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Portable lights",
+                    "procedure_description": "Ensure that portble lights are packed to be used in the car.",
+                    "operation_types": ["NIGHT_VLOS", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Personal",
+            "procedures": [
+                {
+                    "checklist_entry": "Water",
+                    "procedure_description": "Ensure water is packed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Hat and Sunglasses",
+                    "procedure_description": "Ensure a hat and sunglasses are packed.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Warm clothes",
+                    "procedure_description": "Ensure warm clothes are packed.",
+                    "operation_types": ["NIGHT_VLOS", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Sunscreen and Mosquito Repellent",
+                    "procedure_description": "Ensure sunscreen and mosquito repellent are packed.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Mosquito Repellent",
+                    "procedure_description": "Ensure sunscreen and mosquito repellent are packed.",
+                    "operation_types": ["NIGHT_VLOS", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Charged Phone and Power Bank",
+                    "procedure_description": "Ensure a charged phone and power bank are packed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Car",
+            "procedures": [
+                {
+                    "checklist_entry": "Reserve Water",
+                    "procedure_description": "Ensure reserve water is packed in the car.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "First Aid Kit and Snake Bite Kit",
+                    "procedure_description": "Ensure both kits are packed in the car.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Binoculars",
+                    "procedure_description": "Ensure binoculars are packed in the car.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

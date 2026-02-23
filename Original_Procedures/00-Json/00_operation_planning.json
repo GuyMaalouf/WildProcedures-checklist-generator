@@ -1,0 +1,117 @@
+{
+    "title": "Operation Planning",
+    "color": [192, 192, 192],
+    "items": [
+        {
+            "section": "Operational Environment",
+            "procedures": [
+                {
+                    "checklist_entry": "Verify Airspace and Topography",
+                    "procedure_description": "Check for no-fly zones and NOTAMs (https://metar-taf.com/notams/HKNA). Assess the topography for ground obstacles and airspace visibility.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Review Weather Forecast",
+                    "procedure_description": "Use droneweather.xyz to check the temperature (-10° to 40° C), wind speed (< 10 m/s), rain (up to light drizzle), visibility (more than 5km), and Kp-index (max 5).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Crew",
+            "procedures": [
+                {
+                    "checklist_entry": "Confirm Pilot Certification",
+                    "procedure_description": "Ensure the pilot holds a valid drone certificate.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Schedule Pilot Assistant",
+                    "procedure_description": "Book an assistant for situational awareness (air, ground, wildlife).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Agree on Mission Plan and Generate Checklist",
+                    "procedure_description": "Discuss the flight path, waypoints, and areas of interest with the team. Generate the corresponding checklist on WildOps (wilddrone.droneweb.dk).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Submit Operation Request on WildOps",
+                    "procedure_description": "Submit an 'Operation Request' on WildOps (wilddrone.droneweb.dk) and fill in all the required information.",
+                    "operation_types": ["BVLOS_NO_VO","BVLOS_VO","NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Regulations",
+            "procedures": [
+                {
+                    "checklist_entry": "Confirm Operational Limits (1km, Flight Geography)",
+                    "procedure_description": "Ensure operations are within 1 km from the pilot and within the flight geography.",
+                    "operation_types": ["BVLOS_NO_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Confirm Operational Limits (2km, Flight Geography)",
+                    "procedure_description": "Ensure operations are within 2 km from the pilot and within the flight geography.",
+                    "operation_types": ["BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Confirm Operational Limits (5km, Flight Geography)",
+                    "procedure_description": "Ensure operations are within 5 km from the pilot and within the flight geography.",
+                    "operation_types": ["NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Maintain RLOS",
+                    "procedure_description": "Ensure the UAS stays within Radio Line of Sight (RLOS) and avoid flying behind obstacles such as tall buildings or hills.",
+                    "operation_types": ["BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Map Operation During Daytime",
+                    "procedure_description": "Ensure the operation is mapped during the day prior to it taking place at night.",
+                    "operation_types": ["NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Equipment",
+            "procedures": [
+                {
+                    "checklist_entry": "Inspect Drone and Equipment",
+                    "procedure_description": "Check the drone for cracks and smooth motor operation. Verify the transmitter, ensure SD cards are empty and ready for logging, and check battery levels (drone, transmitter, GoPro).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Pack All Equipment",
+                    "procedure_description": "Ensure all items on the equipment list are packed and ready for the operation.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

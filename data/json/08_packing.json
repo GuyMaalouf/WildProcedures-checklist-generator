@@ -1,0 +1,154 @@
+{
+    "title": "Packing",
+    "color": [192, 192, 192],
+    "items": [
+        {
+            "section": "UAS Operation",
+            "procedures": [
+                {
+                    "checklist_entry": "Correct Mission Checklist",
+                    "procedure_description": "Generate a new one on WildOps if needed (wilddrone.droneweb.dk).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "UAS, spare UAS, controller",
+                    "procedure_description": "Offline maps must be downloaded on the controller.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Landing mats, payloads and additional accessories (if available)",
+                    "procedure_description": "Ensure all payloads and accessories are packed and functional.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "UAS batteries charged, spares packed",
+                    "procedure_description": "Check charge level before packing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Empty SD Cards for UAS",
+                    "procedure_description": "Multiple cards recommended.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "GoPro, battery, spare batteries, empty SD card",
+                    "procedure_description": "Verify all components are functional.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Safety Vests",
+                    "procedure_description": "For pilot and assistant pilot.",
+                    "operation_types": ["VLOS","BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "VHF radio, antenna, comms devices (walkie-talkie/mobile)",
+                    "procedure_description": "VHF with battery, antenna, and inter-team communication devices.",
+                    "operation_types": ["BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "ADS-B receiver",
+                    "procedure_description": "Airtrack system for collision avoidance.",
+                    "operation_types": ["BVLOS_VO", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Portable lights",
+                    "procedure_description": "For use in the car during night operations.",
+                    "operation_types": ["NIGHT_VLOS", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Personal",
+            "procedures": [
+                {
+                    "checklist_entry": "Water",
+                    "procedure_description": "Essential for hydration in tropical climate.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Hat and Sunglasses",
+                    "procedure_description": "Essential sun protection.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Warm clothes",
+                    "procedure_description": "Temperature drops significantly at night.",
+                    "operation_types": ["NIGHT_VLOS", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Sunscreen and Mosquito Repellent",
+                    "procedure_description": "Essential for daytime operations.",
+                    "operation_types": ["VLOS", "BVLOS_NO_VO", "BVLOS_VO"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Mosquito Repellent",
+                    "procedure_description": "Essential for night operations.",
+                    "operation_types": ["NIGHT_VLOS", "NIGHT_BVLOS"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Charged Phone and Power Bank",
+                    "procedure_description": "For communication and emergency contact.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Car",
+            "procedures": [
+                {
+                    "checklist_entry": "Reserve Water",
+                    "procedure_description": "Large container for extended operations.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "First Aid Kit and Snake Bite Kit (if available)",
+                    "procedure_description": "Emergency medical supplies.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Binoculars",
+                    "procedure_description": "For wildlife observation and hazard identification.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}
