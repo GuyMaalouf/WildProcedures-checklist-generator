@@ -6,7 +6,7 @@
             "section": "Post-Operation Tasks",
             "procedures": [
                 {
-                    "checklist_entry": "Notify ATC (+254 798 984 005) and radio room (+254 723 312 673)",
+                    "checklist_entry": "Notify ATC ([LOCAL_CONTACT_NUMBER]) and radio room ([LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "Signal completion of operations.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
@@ -27,7 +27,7 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Safety feedback form filled (link on whatsapp)",
+                    "checklist_entry": "Safety feedback form filled (internal daily role assignment link)",
                     "procedure_description": "Ensure the safety feedback form is filled.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],

@@ -94,6 +94,20 @@
                     "number_of_drones": ["MULTIPLE"]
                 },
                 {
+                    "checklist_entry": "No persistent warnings",
+                    "procedure_description": "Review the GCS message log and HUD. All pre-arm checks must be green. Investigate and resolve any persistent warnings before flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Start onboard recording",
+                    "procedure_description": "Confirm the onboard recording system (e.g. RPi camera) is actively recording before arming. Verify recording indicator is active.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
                     "checklist_entry": "'ARMING — TAKING OFF' — take off, maintain 1:1 height-distance",
                     "procedure_description": "Maintain a 1:1 height-distance ratio during take-off.",
                     "operation_types": ["ALL"],

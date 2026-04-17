@@ -1,0 +1,199 @@
+{
+    "title": "KU Glider Assembly",
+    "color": [60, 140, 60],
+    "items": [
+        {
+            "section": "Structural and Assembly",
+            "procedures": [
+                {
+                    "checklist_entry": "Wings, tailplane (tail screw), and canopy securely installed",
+                    "procedure_description": "Verify both wings are fully inserted into the fuselage, wing spar is engaged, and all retention screws or clips are tight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Fuselage, wings, wing spar, and tail free of cracks, dents, warping",
+                    "procedure_description": "Perform a visual structural inspection of all airframe surfaces. Do not fly if any structural damage is found.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "External components mounted securely (GPS, telemetry antenna, camera)",
+                    "procedure_description": "Confirm all externally mounted components are secure, mounts are tight, and no parts protrude or could snag during flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Connections and Wiring",
+            "procedures": [
+                {
+                    "checklist_entry": "Wing servo connectors connected and strain-relieved",
+                    "procedure_description": "Verify each wing servo connector is fully seated, locked, and the cable is looped or secured to prevent accidental pull-out.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Antenna position correct (telemetry, RC)",
+                    "procedure_description": "Check telemetry antenna is vertical and RC antenna is oriented per the pre-flight briefing for optimal RF performance.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "No pinched cables, exposed wires, or loose connectors",
+                    "procedure_description": "Trace all wiring runs and confirm no cables are trapped between panels, no insulation is damaged, and all connectors are fully mated.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Balance and Propulsion (before power on)",
+            "procedures": [
+                {
+                    "checklist_entry": "Battery installed for CG check (and payload if installed)",
+                    "procedure_description": "Insert the flight battery and any mission payload in their bays, then check the airframe balances at the specified CG point.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "CG within acceptable limits",
+                    "procedure_description": "Balance the aircraft on the CG reference marks. Adjust battery position forward or aft as required until CG is within published limits.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Propeller free of cracks and deformation, mounted correctly",
+                    "procedure_description": "Inspect propeller blades for cracks, chips, or warping. Confirm the prop is correctly mounted on the motor shaft and the spinner or nut is tight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Motor mount secure, and spins smoothly",
+                    "procedure_description": "Attempt to twist the motor mount by hand. It must be completely rigid with no play or creaking.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Power-On and Controls",
+            "procedures": [
+                {
+                    "checklist_entry": "RC transmitter on",
+                    "procedure_description": "Power on the RC transmitter and confirm it is bound and showing the correct model profile before powering on the aircraft.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "GCS connected and telemetry link verified",
+                    "procedure_description": "Start the GCS software, confirm the aircraft appears on the map and telemetry parameters are being received.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Aircraft powered on",
+                    "procedure_description": "Connect the flight battery or power switch and wait for autopilot initialisation to complete.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "No autopilot errors requiring calibration or setup (pre-arm checks clean)",
+                    "procedure_description": "Review the GCS HUD and message log for pre-arm warnings. Resolve all warnings before proceeding.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Control surfaces centred at neutral",
+                    "procedure_description": "Visually confirm that elevator, rudder, and ailerons are at neutral (zero deflection) with transmitter sticks centred.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Correct control direction in MANUAL and FBWA (elevator, rudder, ailerons)",
+                    "procedure_description": "In MANUAL mode: apply each stick input and confirm correct surface direction (pull back = elevator up; right rudder = rudder right; right stick = right aileron up / left aileron down). Then switch to FBWA: bank and pitch the airframe by hand and confirm the autopilot deflects surfaces to oppose the movement (roll right = left aileron up; pitch nose up = elevator down). Both checks must pass.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Full and smooth deflection, no binding, no wobble",
+                    "procedure_description": "Sweep each surface through its full range. Movement must be smooth and meet deflection limits specified in the maintenance record.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Apply firm hand pressure on each surface while servos powered to confirm no slipping linkages",
+                    "procedure_description": "With servos engaged, push firmly on each surface. Any movement indicates a slipping servo horn or loose linkage — must be corrected before flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Throttle response verified with aircraft restrained and prop area clear",
+                    "procedure_description": "With the aircraft firmly restrained and all personnel clear of the propeller arc, briefly increase throttle to confirm motor and ESC respond correctly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Avionics and Safety Settings",
+            "procedures": [
+                {
+                    "checklist_entry": "GPS fix stable (target 10+ satellites) and home position set",
+                    "procedure_description": "Wait for GPS HDOP to settle and satellite count to reach 10 or more. Confirm the GCS shows the home position set at the launch point.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "RC RSSI and telemetry link quality acceptable (single combined 'links OK' check)",
+                    "procedure_description": "Check GCS link quality indicators and RC RSSI are within acceptable limits per SOP thresholds, with no dropouts observed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Flight modes correct and match the mission plan",
+                    "procedure_description": "Verify flight mode switch positions on the transmitter are programmed to the modes specified in the mission plan (e.g. AUTO, GUIDED, MANUAL).",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Failsafe actions confirmed (loss of C2 and loss of telemetry behaviour as intended)",
+                    "procedure_description": "Review GCS failsafe settings and confirm the aircraft will perform the planned failsafe action on loss of C2 link and on loss of telemetry, consistent with the approved OpSpec.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Kill switch functional and tested (brief test, then reset)",
+                    "procedure_description": "Activate the kill switch briefly to confirm the motor disarms immediately. Reset and confirm normal arm state is restored before proceeding.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

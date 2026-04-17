@@ -23,11 +23,13 @@ Usage:
 import os
 import sys
 import shutil
+import argparse
 from datetime import datetime
 
 # Import the generator and helpers from the existing module
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from generate_checklist import ChecklistGenerator, get_json_files
+from profile_utils import resolve_data_paths
 
 
 # ─── Operations to generate ───────────────────────────────────────────────────
@@ -75,14 +77,55 @@ OPERATIONS = [
         "number_of_drones": "MULTIPLE",
         "label":            "BVLOS No VO | DJI | Multiple",
     },
+    {
+        "folder":           "07-KU_Glider",
+        "operation_type":   "BVLOS_NO_VO",
+        "drone_platform":   "KU_GLIDER",
+        "number_of_drones": "SINGLE",
+        "label":            "BVLOS No VO | KU Glider | Single",
+    },
+    {
+        "folder":           "08-Helios",
+        "operation_type":   "BVLOS_NO_VO",
+        "drone_platform":   "SDU_HELIOS",
+        "number_of_drones": "SINGLE",
+        "label":            "BVLOS No VO | SDU Helios | Single",
+    },
 ]
 # ──────────────────────────────────────────────────────────────────────────────
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate all preset checklist bundles.")
+    parser.add_argument('--profile',
+                        default='wild',
+                        help='Procedure profile to use from data/profiles (default: wild)')
+    parser.add_argument('--json-dir',
+                        help='Path to JSON data directory (overrides profile path)')
+    parser.add_argument('--constants-file',
+                        help='Path to constants.json (overrides profile path)')
+    parser.add_argument('--assembly-dir',
+                        help='Path to assembly directory (overrides profile path)')
+    args = parser.parse_args()
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    json_dir   = os.path.join(script_dir, 'data', 'json')
     output_dir = os.path.join(script_dir, 'output')
+
+    try:
+        paths = resolve_data_paths(
+            script_dir,
+            profile_name=args.profile,
+            json_dir_override=args.json_dir,
+            constants_file_override=args.constants_file,
+            assembly_dir_override=args.assembly_dir,
+        )
+    except ValueError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+
+    json_dir = paths['json_dir']
+    constants_src = paths['constants_file']
+    assembly_src_dir = paths['assembly_dir']
 
     # ── Dated root folder ─────────────────────────────────────────────────────
     today        = datetime.now().strftime("%Y%m%d_%H%M")
@@ -93,13 +136,14 @@ def main():
     print("=" * 60)
     print("  Bulk Checklist Generator")
     print("=" * 60)
+    print(f"  Profile: {args.profile}")
     print(f"  Date   : {today}")
     print(f"  Output : output/{today}/")
     print("=" * 60)
     print()
 
     # ── Load JSON files ───────────────────────────────────────────────────────
-    json_files = get_json_files(json_dir)
+    json_files = get_json_files(json_dir, assembly_src_dir)
     if not json_files:
         print(f"Error: No JSON files found in {json_dir}")
         sys.exit(1)
@@ -114,11 +158,18 @@ def main():
         shutil.copy2(jf, json_backup_dir)
 
     # Also copy constants.json for completeness
-    constants_src = os.path.join(script_dir, 'data', 'constants.json')
     if os.path.exists(constants_src):
         shutil.copy2(constants_src, json_backup_dir)
 
-    total_files = len(json_files) + (1 if os.path.exists(constants_src) else 0)
+    # Also copy assembly JSON files
+    assembly_files_backed_up = []
+    if os.path.exists(assembly_src_dir):
+        for filename in sorted(os.listdir(assembly_src_dir)):
+            if filename.endswith('.json'):
+                shutil.copy2(os.path.join(assembly_src_dir, filename), json_backup_dir)
+                assembly_files_backed_up.append(filename)
+
+    total_files = len(json_files) + (1 if os.path.exists(constants_src) else 0) + len(assembly_files_backed_up)
     print(f"✓ JSON snapshot saved  → {today}/00-Json/  ({total_files} files)")
     print()
 

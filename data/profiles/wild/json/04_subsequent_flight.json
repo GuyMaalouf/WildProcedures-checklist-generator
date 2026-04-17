@@ -1,0 +1,221 @@
+{
+  "title": "Subsequent Flight",
+  "color": [
+    0,
+    128,
+    255
+  ],
+  "items": [
+    {
+      "section": "GoPro",
+      "procedures": [
+        {
+          "checklist_entry": "GoPro: battery, SD card, settings, start recording, announce details (date, time, flight number, mission objective, and crew roles)",
+          "procedure_description": "Check sufficient battery and SD card space remaining. Settings: 1080p at 25 fps with visible timestamp. Announce operation number, flight number, date, time, crew roles, and mission objective.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Equipment",
+      "procedures": [
+        {
+          "checklist_entry": "Controller on",
+          "procedure_description": "Power on the controller.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "New battery & SD card",
+          "procedure_description": "Check UAS and controller battery remaining. Insert new SD card into drone.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "UAS on - errors, GPS fix, RSSI, Battery, SD Card, Payload",
+          "procedure_description": "Verify GPS (6+ satellites), strong RSSI, and controller mode is correct.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Comms and VHF",
+          "procedure_description": "Verify inter-team communications and VHF radio are operational.",
+          "operation_types": [
+            "BVLOS_VO",
+            "NIGHT_BVLOS"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Final Checks",
+      "procedures": [
+        {
+          "checklist_entry": "Mission plan and team briefing",
+          "procedure_description": "Discuss flight path, waypoints, and areas of interest with the team.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Weather (wind, visibility, rain)",
+          "procedure_description": "Verify no high winds, good visibility, no incoming rain, no low clouds.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "IMSAFE (Illness, Medication, Stress, Alcohol, Fatigue, Emotion)",
+          "procedure_description": "Team is IMSAFE.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Team behind pilot",
+          "procedure_description": "All team members must position safely behind the pilot.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Go/no-go",
+          "procedure_description": "Team confirms: no ground risks (wildlife, uninvolved people), no air risks (drones, aircraft).",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Nearby pilots notified",
+          "procedure_description": "Ensure no objections from nearby pilots before take-off.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "MULTIPLE"
+          ]
+        },
+        {
+          "checklist_entry": "No persistent warnings",
+          "procedure_description": "Review the GCS message log and HUD. All pre-arm checks must be green. Investigate and resolve any persistent warnings before flight.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "SDU_HELIOS"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Start onboard recording",
+          "procedure_description": "Confirm the onboard recording system (e.g. RPi camera) is actively recording before arming. Verify recording indicator is active.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "KU_GLIDER"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "'ARMING - TAKING OFF' - take off, maintain 1:1 height-distance",
+          "procedure_description": "Maintain a 1:1 height-distance ratio during take-off.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Verify flight performance (fwd, back, left, right)",
+          "procedure_description": "Ensure UAS is at safe distance and responds correctly to all inputs.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    }
+  ]
+}

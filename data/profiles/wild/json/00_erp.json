@@ -1,0 +1,269 @@
+{
+  "title": "Emergency Response Plan",
+  "color": [
+    180,
+    0,
+    0
+  ],
+  "items": [
+    {
+      "section": "Injury to Crew or Third Party",
+      "procedures": [
+        {
+          "checklist_entry": "Trigger: Confirmed physical injury requiring medical attention",
+          "procedure_description": "Any crew member or third party with confirmed physical injury.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Contact radio room for medical response ([LOCAL_CONTACT_NUMBER])",
+          "procedure_description": "Provide location (patrol block), injury nature, and casualty count.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+          "procedure_description": "First priority contact.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Injury or Fatality to Wildlife",
+      "procedures": [
+        {
+          "checklist_entry": "Trigger: Confirmed impact or harm to wildlife caused by UAS",
+          "procedure_description": "Incident involving wildlife impact or harm from UAS operations.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Coordinate with conservancy authorities ([LOCAL_CONTACT_NUMBER])",
+          "procedure_description": "Contact the conservancy team to report and manage the incident.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+          "procedure_description": "Report the incident.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Fire (UAS, Batteries, Equipment, or Bush)",
+      "procedures": [
+        {
+          "checklist_entry": "Trigger: Visible flames, smoke, battery overheating, or bush fire",
+          "procedure_description": "Apply this procedure in the event of fire involving UAS, batteries, ground equipment, or a bush/grass fire in the operational area.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Ensure personnel safety, increase distance",
+          "procedure_description": "Move all personnel upwind and away from the fire. Do not attempt to fight the fire. LiPo batteries can reignite.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Contact radio room for fire response ([LOCAL_CONTACT_NUMBER])",
+          "procedure_description": "Report fire location (patrol block), size, and direction of spread.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+          "procedure_description": "Call the designated safety coordinator and report the fire.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Prevent escalation and secondary ignition",
+          "procedure_description": "Keep all personnel and vehicles away from burning batteries or equipment. LiPo batteries can reignite.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Mid-Air Collision with Manned Aircraft",
+      "procedures": [
+        {
+          "checklist_entry": "Trigger: Confirmed contact or credible report of collision",
+          "procedure_description": "Apply this procedure when a confirmed or credible collision between the UAS and a manned aircraft has occurred.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Coordinate with ATC ([LOCAL_CONTACT_NUMBER]Admin: [LOCAL_CONTACT_NUMBER])",
+          "procedure_description": "Provide: UAS type, last known location, altitude, speed, heading, and remaining battery.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+          "procedure_description": "Call the designated safety coordinator without delay.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Preserve situational information for reporting",
+          "procedure_description": "Do not delete flight logs, images, or controller data. Record time, location, and all witness accounts.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "UAS Crash Outside Conservancy",
+      "procedures": [
+        {
+          "checklist_entry": "Trigger: Confirmed impact beyond controlled operational areas",
+          "procedure_description": "Apply this procedure when the UAS has crashed or landed outside the conservancy boundaries or controlled operational areas.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Coordinate with ATC ([LOCAL_CONTACT_NUMBER]Admin: [LOCAL_CONTACT_NUMBER])",
+          "procedure_description": "If third parties or property are affected, contact local authorities as directed by the Field Safety Coordinator.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+          "procedure_description": "Call the designated safety coordinator and report the incident, location, and any third-party involvement.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    }
+  ]
+}

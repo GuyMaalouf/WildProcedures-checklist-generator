@@ -1,0 +1,107 @@
+{
+  "title": "In-Flight",
+  "color": [
+    128,
+    255,
+    0
+  ],
+  "items": [
+    {
+      "section": "Flight Operations",
+      "procedures": [
+        {
+          "checklist_entry": "(Optional) Waypoint mission",
+          "procedure_description": "If using automated waypoint mission mode.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "(Optional) Start recording",
+          "procedure_description": "For flight telemetry logging.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "(Assistant check) Weather (wind, rain, visibility)",
+          "procedure_description": "Continuously observe weather conditions during the flight.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "UAS (battery, RSSI, GPS, altitude)",
+          "procedure_description": "Continuously observe UAS parameters: battery, RSSI, GPS, altitude, distance, speed.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Transmitter battery",
+          "procedure_description": "Check the remaining battery on the transmitter.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Air traffic (124.3 MHz, FlightRadar24)",
+          "procedure_description": "Continuously observe air traffic on frequency 124.3 MHz and FlightRadar24.",
+          "operation_types": [
+            "BVLOS_VO",
+            "NIGHT_BVLOS"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "'DRONE INCOMING - LANDING' announced",
+          "procedure_description": "Inform all personnel in the operational area.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ __pycache__/
 .Python
 env/
 venv/
+.venv/
 ENV/
 build/
 develop-eggs/
@@ -23,10 +24,20 @@ wheels/
 .installed.cfg
 *.egg
 
-# Generated PDFs and folders (keep archive structure)
-output/*/
+# Generated output
+output/*
+!output/.gitkeep
 !output/archive/
-output/archive/*/
+output/archive/*
+!output/archive/.gitkeep
+
+# Local custom profiles (keep built-in public profiles)
+data/profiles/*
+!data/profiles/README.md
+!data/profiles/template/
+!data/profiles/template/**
+!data/profiles/wild/
+!data/profiles/wild/**
 
 # IDEs
 .vscode/

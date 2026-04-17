@@ -7,7 +7,7 @@
             "procedures": [
                 {
                     "checklist_entry": "Correct Mission Checklist",
-                    "procedure_description": "Generate a new one on WildOps if needed (wilddrone.droneweb.dk).",
+                    "procedure_description": "Generate a new one on WildOps if needed ([CHECKLIST_PORTAL_URL]).",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
@@ -24,6 +24,27 @@
                     "procedure_description": "Ensure all payloads and accessories are packed and functional.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Telemetry radio and USB cable",
+                    "procedure_description": "Pack the telemetry radio module and its USB cable for GCS ground connection.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Tape (securing tape for canopy and general use)",
+                    "procedure_description": "Pack sufficient tape for canopy securing and any field repairs.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Tools (including allen key set)",
+                    "procedure_description": "Pack the full tool kit including allen keys required for motor mount, prop nut, and assembly screws.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
                     "number_of_drones": ["ALL"]
                 },
                 {

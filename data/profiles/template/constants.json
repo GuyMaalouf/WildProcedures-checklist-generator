@@ -1,0 +1,13 @@
+{
+    "operation_types": [
+        ["VLOS", "VLOS"],
+        ["BVLOS", "BVLOS"]
+    ],
+    "drone_platforms": [
+        ["GENERIC", "Generic UAS"]
+    ],
+    "number_of_drones": [
+        ["SINGLE", "Single UAS"],
+        ["MULTIPLE", "Multiple UAS"]
+    ]
+}

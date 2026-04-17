@@ -1,215 +1,160 @@
-# WildProcedures: The Drone Operations Checklist Generator
+# WildProcedures Checklist Generator
 
-A standalone Python tool for generating customized drone operation checklists and procedure manuals in PDF format.
+Generate operation-specific drone checklists and procedure manuals as PDFs.
 
-## Features
+The repository ships with a sanitized public dataset and a starter template so teams can either use the bundled procedures or copy them into their own profile and customize from there.
 
-- Generate compact A5 checklists for field use
-- Generate detailed A4 procedure manuals
-- Filter procedures based on:
-  - Operation type (VLOS, BVLOS with/without observer, Night operations)
-  - Drone platform (DJI, Ebee X, UoB Glider, Papa Smurf, CoDrone, Parrot Anafi)
-  - Number of drones (Single, Multiple, Swarm)
-- Professional PDF formatting with custom fonts and branding
+## What You Get
+
+- A compact A5 checklist PDF for field use
+- A detailed A4 procedures PDF for briefing and reference
+- Filtering by operation type, drone platform, and number of drones
+- Profile-based data management for built-in and custom procedure sets
+- Interactive terminal navigation for users who do not want to edit every command by hand
 
 ## Requirements
 
-- Python 3.6 or higher
-- fpdf library
+- Python 3.8 or later
+- `fpdf==1.7.2`
 
-## Installation
+## Install
 
-1. Install the required Python package:
 ```bash
-pip install fpdf
+pip install -r requirements.txt
 ```
 
-## Usage
+## Quick Start
 
-### Basic Usage
+Generate the default checklist set:
 
-Generate checklists with default settings (VLOS, DJI, Single drone):
 ```bash
 python generate_checklist.py
 ```
 
-### Custom Configuration
+Open the interactive menu:
 
-Specify operation parameters:
 ```bash
-python generate_checklist.py --operation BVLOS_NO_VO --drone EBEE --count MULTIPLE
+python interactive_generator.py
 ```
 
-Short form:
+Generate all preset bundles for a profile:
+
 ```bash
-python generate_checklist.py -o NIGHT_VLOS -d PARROT -c SINGLE
+python generate_all.py --profile wild
 ```
 
-### List Available Options
+## Common Commands
 
-View all available options:
+List available operation, drone, and fleet options:
+
 ```bash
 python generate_checklist.py --list-options
 ```
 
-## Options
+List available profiles:
 
-### Operation Types
-- `VLOS` - VLOS
-- `BVLOS_NO_VO` - BVLOS 1km (No Observer)
-- `BVLOS_VO` - BVLOS 2km (Observer)
-- `NIGHT_VLOS` - Night VLOS
-- `NIGHT_BVLOS` - Night BVLOS
+```bash
+python generate_checklist.py --list-profiles
+```
 
-### Drone Platforms
-- `DJI` - DJI
-- `EBEE` - Ebee X
-- `UOB_GLIDER` - UoB Glider
-- `SMURF` - Papa Smurf
-- `CODRONE` - CoDrone
-- `PARROT` - Parrot Anafi
+Create a custom profile from the starter template:
 
-### Number of Drones
-- `SINGLE` - Single Drone
-- `MULTIPLE` - Multiple Drones
-- `SWARM` - Swarm of Drones
+```bash
+python generate_checklist.py --create-profile my_ops --from-profile template
+```
+
+Generate from a specific profile:
+
+```bash
+python generate_checklist.py --profile wild -o BVLOS_NO_VO -d DJI -c SINGLE
+```
+
+Advanced use with explicit data overrides:
+
+```bash
+python generate_checklist.py --profile wild --json-dir /path/to/json
+python generate_all.py --profile wild --json-dir /path/to/json --constants-file /path/to/constants.json --assembly-dir /path/to/assembly
+```
+
+## Profiles
+
+A profile is a reusable checklist package. It contains the option lists shown in the UI and the JSON files that become the generated PDFs.
+
+- `wild` is the public built-in profile.
+- `template` is the starter profile you should copy when building your own dataset.
+- Custom profiles live under `data/profiles/<profile_name>/`.
+
+Use the interactive menu or `--create-profile` to make a copy, then edit the copied files in your text editor.
+
+### Profile Contents
+
+Each profile contains:
+
+- `constants.json` - available operation types, drone platforms, and fleet sizes
+- `json/*.json` - the main procedure sections
+- `assembly/*.json` - optional platform-specific assembly content that can be inserted before first flight
+
+## How To Edit Content
+
+Edit the JSON files directly when you want to change the actual procedures.
+
+- Add or update options in `constants.json` when you want new labels in the UI.
+- Add or update section files in `json/` when you want to change checklist content.
+- Add platform-specific setup steps in `assembly/` when the content should only appear for a specific drone type.
+
+The generator reads the JSON in document order. For the built-in profile, assembly content is inserted before the first-flight section so setup steps appear in the expected place in the PDF.
+
+## Data Layout
+
+```
+data/
+├── constants.json              # Legacy fallback
+├── json/                       # Legacy fallback
+├── assembly/                   # Legacy fallback
+└── profiles/
+    ├── README.md
+    ├── template/
+    │   ├── constants.json
+    │   ├── json/
+    │   └── assembly/
+    └── wild/
+        ├── constants.json
+        ├── json/
+        └── assembly/
+```
+
+## Procedure Format
+
+Each procedure entry uses this shape:
+
+```json
+{
+  "checklist_entry": "Brief checklist item",
+  "procedure_description": "Detailed procedure guidance",
+  "operation_types": ["VLOS"] or ["ALL"],
+  "drone_platforms": ["GENERIC"] or ["ALL"],
+  "number_of_drones": ["SINGLE"] or ["ALL"]
+}
+```
 
 ## Output
 
-The script generates PDFs in organized folders within the `output/` directory:
+Each run creates a timestamped folder like this:
 
-### Current Generation
-Each time you run the script, it creates a new folder named:
-```
-{OPERATION_TYPE}_{DRONE_PLATFORM}_{NUMBER_OF_DRONES}_{TIMESTAMP}/
-```
-
-This folder contains two PDF files:
-- `checklist.pdf` - Compact A5 field checklist with checkboxes
-- `procedures.pdf` - Detailed A4 procedure manual with descriptions
-
-Example:
-```
-output/
-└── VLOS_DJI_SINGLE_20251028_143012/
-    ├── checklist.pdf
-    └── procedures.pdf
+```text
+output/{OPERATION}_{DRONE}_{COUNT}_{TIMESTAMP}/
+├── checklist.pdf
+└── procedures.pdf
 ```
 
-### Archive
-When you generate new PDFs, the previous generation folder is automatically moved to `output/archive/`. This keeps your output directory clean while preserving all historical generations.
+Older output folders are moved to `output/archive/` automatically.
 
-Example after multiple generations:
-```
-output/
-├── NIGHT_VLOS_PARROT_MULTIPLE_20251028_143033/  ← Latest
-│   ├── checklist.pdf
-│   └── procedures.pdf
-└── archive/
-    ├── VLOS_DJI_SINGLE_20251028_143012/
-    ├── BVLOS_NO_VO_EBEE_SWARM_20251028_141317/
-    └── ...
-```
+## Notes
 
-## Directory Structure
-
-```
-.
-├── generate_checklist.py    # Main script
-├── interactive_generator.py  # Interactive mode script
-├── README.md                 # This file
-├── QUICKSTART.md             # Quick start guide
-├── LICENSE                   # License information
-├── requirements.txt          # Python dependencies
-├── data/
-│   ├── constants.json        # Configuration for operation types, drones, etc.
-│   └── json/                 # Checklist data files
-│       ├── 00_operation_planning.json
-│       ├── 01_pre_operation.json
-│       ├── 02_packing.json
-│       ├── 03_first_flight.json
-│       ├── 04_pre_flight.json
-│       ├── 05_in_flight.json
-│       ├── 06_post_flight.json
-│       ├── 07_post_operation.json
-│       ├── 08_contingency_procedures.json
-│       └── 09_emergency_procedures.json
-├── fonts/                    # Custom fonts
-│   ├── Open_Sans/
-│   └── Montserrat/
-├── media/                    # Logo and images
-│   └── WD_logo.png
-└── output/                   # Generated PDFs
-    ├── {CONFIG}_{TIMESTAMP}/ # Latest generation folder
-    │   ├── checklist.pdf
-    │   └── procedures.pdf
-    └── archive/              # Previous generations
-        ├── {CONFIG}_{TIMESTAMP}/
-        └── ...
-```
-
-## Customization
-
-### Customizing Operation Types, Drone Platforms, or Drone Counts
-
-Edit `data/constants.json` to modify the available options. The file structure is:
-
-```json
-{
-    "operation_types": [
-        ["CODE", "Display Name"],
-        ...
-    ],
-    "drone_platforms": [
-        ["CODE", "Display Name"],
-        ...
-    ],
-    "number_of_drones": [
-        ["CODE", "Display Name"],
-        ...
-    ]
-}
-```
-
-### Adding New Procedures
-
-Edit the JSON files in `data/json/` to add or modify procedures. Each procedure should follow this structure:
-
-```json
-{
-    "checklist_entry": "Brief checklist item",
-    "procedure_description": "Detailed procedure description",
-    "operation_types": ["VLOS", "BVLOS", "EVLOS"] or ["ALL"],
-    "drone_platforms": ["DJI", "AUTEL", "OTHER"] or ["ALL"],
-    "number_of_drones": ["SINGLE", "MULTIPLE"] or ["ALL"]
-}
-```
-
-### Changing Branding
-
-Replace `media/WD_logo.png` with your own logo (recommended size: 28mm width at 72 DPI).
+- The repository is set up so local generated output stays out of version control.
+- The bundled datasets were sanitized for public release.
+- The app currently does not include a formal validation or dry-run mode.
 
 ## License
 
-This tool is provided as-is for drone operation planning and safety purposes.
-
-## 📚 Citation
-
-If you use WildProcedures in your research or project, please cite:
-
-```bibtex
-@software{wildprocedures2025,
-  author = {Maalouf, Guy},
-  title = {WildProcedures: The Drone Operations Checklist Generator},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/GuyMaalouf/WildProcedures-checklist-generator/}
-}
-```
-
-## 💰 Funding
-This work was funded by the European Union’s Horizon Europe research and innovation funding programme under the Marie Skłodowska-Curie grant agreement no. 101071224.
-
-## Support
-
-For issues or questions, please refer to the JSON data files for procedure content or the script comments for technical details.
+See `LICENSE`.

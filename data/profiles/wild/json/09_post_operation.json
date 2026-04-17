@@ -1,0 +1,93 @@
+{
+  "title": "Post-Operation",
+  "color": [
+    192,
+    192,
+    192
+  ],
+  "items": [
+    {
+      "section": "Post-Operation Tasks",
+      "procedures": [
+        {
+          "checklist_entry": "Notify ATC ([LOCAL_CONTACT_NUMBER]) and radio room ([LOCAL_CONTACT_NUMBER])",
+          "procedure_description": "Signal completion of operations.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "SD cards backed up and formatted",
+          "procedure_description": "Use naming convention: 2025MMDD_WDXX_N_Pilot.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Batteries recharged or storage charged",
+          "procedure_description": "Use appropriate charge mode for storage if needed.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Safety feedback form filled (internal daily role assignment link)",
+          "procedure_description": "Ensure the safety feedback form is filled.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Flight documented (logbook & KFL)",
+          "procedure_description": "Include flight times, observations, and any anomalies.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        },
+        {
+          "checklist_entry": "Incidents/accidents reported",
+          "procedure_description": "Follow emergency protocols if any occurred.",
+          "operation_types": [
+            "ALL"
+          ],
+          "drone_platforms": [
+            "ALL"
+          ],
+          "number_of_drones": [
+            "ALL"
+          ]
+        }
+      ]
+    }
+  ]
+}

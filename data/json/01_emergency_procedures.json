@@ -20,14 +20,14 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Fly-away: orient antenna overhead, switch flight mode, kill switch, call ATC Tower (+254 116 388 564)",
+                    "checklist_entry": "Fly-away: orient antenna overhead, switch flight mode, kill switch, call ATC Tower ([LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "If switching flight mode fails, use kill switch. Inform ATC Tower of drone size, location, direction, height, speed, and remaining battery.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Crew unfit: RTH, first aid, call radio room (+254 723 312 673)",
+                    "checklist_entry": "Crew unfit: RTH, first aid, call radio room ([LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "Provide first aid. Keep calm and communicate clearly.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],

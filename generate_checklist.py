@@ -18,11 +18,14 @@ from fpdf import FPDF
 from datetime import datetime
 import argparse
 
+from profile_utils import create_profile, list_profiles, resolve_data_paths
 
-def load_constants():
+
+def load_constants(constants_file=None):
     """Load constants from JSON file."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    constants_file = os.path.join(script_dir, 'data/constants.json')
+    if constants_file is None:
+        constants_file = os.path.join(script_dir, 'data/constants.json')
     
     if os.path.exists(constants_file):
         with open(constants_file, 'r', encoding='utf-8') as f:
@@ -56,6 +59,25 @@ def load_constants():
 OPERATION_TYPE_CHOICES, DRONE_PLATFORM_CHOICES, NUMBER_OF_DRONES_CHOICES = load_constants()
 
 
+def safe_pdf_text(value):
+    """Return text that can always be rendered by the built-in FPDF fonts."""
+    if value is None:
+        return ""
+    text = str(value)
+    replacements = {
+        "\u2014": "-",
+        "\u2013": "-",
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u2022": "-",
+    }
+    for source, target in replacements.items():
+        text = text.replace(source, target)
+    return text.encode("ascii", "ignore").decode("ascii")
+
+
 class ChecklistGenerator:
     """Generator for creating customized drone operation checklists and procedure manuals."""
 
@@ -74,13 +96,10 @@ class ChecklistGenerator:
         self.drone_platform = drone_platform
         self.number_of_drones = number_of_drones
         self.checklists = self.load_checklists()
-        
-        # Set up paths for resources (fonts and logo)
+
+        # Set up paths for resources (logo only). Core PDF fonts are used so
+        # the generator works out of the box without shipping TTF files.
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        self.font_path_open_sans_regular = os.path.join(script_dir, 'fonts/Open_Sans/static/OpenSans-Regular.ttf')
-        self.font_path_open_sans_bold = os.path.join(script_dir, 'fonts/Open_Sans/static/OpenSans-Bold.ttf')
-        self.font_path_montserrat_bold = os.path.join(script_dir, 'fonts/Montserrat/static/Montserrat-Bold.ttf')
-        self.font_path_montserrat_medium = os.path.join(script_dir, 'fonts/Montserrat/static/Montserrat-Medium.ttf')
         self.logo_path = os.path.join(script_dir, 'media/WD_logo.png')
         
         # Create output directory if it doesn't exist
@@ -149,24 +168,39 @@ class ChecklistGenerator:
                 filtered_procedures.append(procedure)
         return filtered_procedures
 
+    def filter_sections(self, items):
+        """Return only sections that contain at least one matching procedure."""
+        filtered_sections = []
+        for section in items:
+            matched_procedures = self.filter_procedures(section.get('procedures', []))
+            if not matched_procedures:
+                continue
+            filtered_sections.append({
+                'section': section.get('section', 'Untitled Section'),
+                'procedures': matched_procedures,
+            })
+        return filtered_sections
+
     def add_branding_banner(self, pdf, title, max_title_width, vertical_spacing):
         """Add logo and title banner to the PDF page."""
         if os.path.exists(self.logo_path):
             pdf.image(self.logo_path, 10, 6, 28)
-        pdf.set_font("Montserrat-Bold", size=20)
-        combined_title = f"{title}".upper()
+        pdf.set_font("Helvetica", style='B', size=20)
+        combined_title = safe_pdf_text(f"{title}").upper()
         pdf.set_x((pdf.w - max_title_width) / 2)
         pdf.multi_cell(max_title_width, 10, combined_title, align='C')
         pdf.ln(vertical_spacing)
 
     def add_metadata(self, pdf, font_size, box_width):
         """Add metadata box with operation details and timestamp."""
-        pdf.set_font("OpenSans", size=font_size)
+        pdf.set_font("Helvetica", size=font_size)
         operation_type_expanded = dict(OPERATION_TYPE_CHOICES).get(self.operation_type, self.operation_type)
         drone_platform_expanded = dict(DRONE_PLATFORM_CHOICES).get(self.drone_platform, self.drone_platform)
         number_of_drones_expanded = dict(NUMBER_OF_DRONES_CHOICES).get(self.number_of_drones, self.number_of_drones)
         current_datetime = datetime.now().strftime("%d-%m-%Y %H:%M")
-        metadata = f"{operation_type_expanded} | {drone_platform_expanded} | {number_of_drones_expanded} | {current_datetime}"
+        metadata = safe_pdf_text(
+            f"{operation_type_expanded} | {drone_platform_expanded} | {number_of_drones_expanded} | {current_datetime}"
+        )
         pdf.set_fill_color(211, 211, 211) 
         pdf.cell(box_width, font_size*0.6, metadata, border=1, ln=True, align='C', fill=True)
 
@@ -187,25 +221,25 @@ class ChecklistGenerator:
         
         ## Initialize PDF
         pdf = FPDF(format='A5')
-        pdf.add_font("OpenSans", "", self.font_path_open_sans_regular, uni=True)
-        pdf.add_font("OpenSans", "B", self.font_path_open_sans_bold, uni=True)
-        pdf.add_font("Montserrat-Bold", "", self.font_path_montserrat_bold, uni=True)
-        pdf.add_font("Montserrat-Medium", "", self.font_path_montserrat_medium, uni=True)
-        pdf.set_font("OpenSans", size=font_size)
+        pdf.set_font("Helvetica", size=font_size)
+        rendered_any_content = False
         
         for checklist in self.checklists:
             title = checklist['title']
             color = checklist.get('color', [0, 0, 0])
-            items = checklist['items']
+            items = self.filter_sections(checklist.get('items', []))
+            if not items:
+                continue
+
+            rendered_any_content = True
             page_number = 1
             pdf.add_page()
             
             # Calculate section height
             section_height = vertical_spacing
             for section in items:
-                filtered_procedures = self.filter_procedures(section['procedures'])
-                for procedure in filtered_procedures:
-                    text_width = pdf.get_string_width(procedure['checklist_entry'])
+                for procedure in section['procedures']:
+                    text_width = pdf.get_string_width(safe_pdf_text(procedure['checklist_entry']))
                     lines = max(1, ((text_width+bullet_spacing) // (box_width))+1)
                     section_height += vertical_spacing * lines
             
@@ -219,14 +253,13 @@ class ChecklistGenerator:
             pdf.set_fill_color(*color)
             pdf.rect(140, 0, 10, 210, 'F')  # Color band on the right for A5
             pdf.set_text_color(0, 0, 0)
-            pdf.set_font("OpenSans", size=font_size)
+            pdf.set_font("Helvetica", size=font_size)
             
             # Process sections
             for section in items:
                 section_height = vertical_spacing
-                filtered_procedures = self.filter_procedures(section['procedures'])
-                for procedure in filtered_procedures:
-                    text_width = pdf.get_string_width(procedure['checklist_entry'])
+                for procedure in section['procedures']:
+                    text_width = pdf.get_string_width(safe_pdf_text(procedure['checklist_entry']))
                     lines = max(1, ((text_width+bullet_spacing) // (box_width))+1)
                     section_height += vertical_spacing * lines
 
@@ -239,26 +272,32 @@ class ChecklistGenerator:
                     pdf.set_fill_color(*color)
                     pdf.rect(140, 0, 10, 210, 'F')
                     pdf.set_text_color(0, 0, 0)
-                    pdf.set_font("OpenSans", size=font_size)
+                    pdf.set_font("Helvetica", size=font_size)
 
                 # Draw section box
                 pdf.rect(10, pdf.get_y(), box_width, section_height, 'D')
                 pdf.set_fill_color(*color)
                 pdf.rect(10, pdf.get_y(), box_width, vertical_spacing, 'F')
-                pdf.set_font("Montserrat-Medium", size=font_size + 2)
+                pdf.set_font("Helvetica", style='B', size=font_size + 2)
                 pdf.set_text_color(255, 255, 255)
-                pdf.cell(box_width, vertical_spacing, txt=section['section'], ln=True, align='C')
+                pdf.cell(box_width, vertical_spacing, txt=safe_pdf_text(section['section']), ln=True, align='C')
                 pdf.set_text_color(0, 0, 0)
-                pdf.set_font("OpenSans", size=font_size)
+                pdf.set_font("Helvetica", size=font_size)
                 
                 # Add procedures
-                for procedure in filtered_procedures:
-                    text_width = pdf.get_string_width(procedure['checklist_entry'])
+                for procedure in section['procedures']:
+                    text_width = pdf.get_string_width(safe_pdf_text(procedure['checklist_entry']))
                     lines = max(1, text_width // (box_width - bullet_spacing))
                     pdf.cell(bullet_spacing, vertical_spacing * lines, txt='o', ln=False)
-                    pdf.multi_cell(box_width - bullet_spacing, vertical_spacing, txt=procedure['checklist_entry'], ln=True)
+                    pdf.multi_cell(box_width - bullet_spacing, vertical_spacing, txt=safe_pdf_text(procedure['checklist_entry']))
             
             pdf.ln(vertical_spacing)
+
+        if not rendered_any_content:
+            raise ValueError(
+                "No matching checklist procedures were found for this selection. "
+                "Try a different profile, operation, drone platform, or fleet size."
+            )
         
         # Output PDF
         output_path = os.path.join(output_folder, filename)
@@ -286,26 +325,26 @@ class ChecklistGenerator:
         ## Initialize PDF
         pdf = FPDF(format='A4')
         pdf.set_right_margin(right_margin)
-        pdf.add_font("OpenSans", "", self.font_path_open_sans_regular, uni=True)
-        pdf.add_font("OpenSans", "B", self.font_path_open_sans_bold, uni=True)
-        pdf.add_font("Montserrat-Bold", "", self.font_path_montserrat_bold, uni=True)
-        pdf.add_font("Montserrat-Medium", "", self.font_path_montserrat_medium, uni=True)
-        pdf.set_font("OpenSans", size=font_size)
+        pdf.set_font("Helvetica", size=font_size)
+        rendered_any_content = False
         
         for checklist in self.checklists:
             title = checklist['title']
             color = checklist.get('color', [0, 0, 0])
-            items = checklist['items']
+            items = self.filter_sections(checklist.get('items', []))
+            if not items:
+                continue
+
+            rendered_any_content = True
             page_number = 1
             pdf.add_page()
             
             # Calculate section height
             section_height = vertical_spacing
             for section in items:
-                filtered_procedures = self.filter_procedures(section['procedures'])
-                for procedure in filtered_procedures:
-                    entry = procedure['checklist_entry']
-                    description = procedure['procedure_description']
+                for procedure in section['procedures']:
+                    entry = safe_pdf_text(procedure['checklist_entry'])
+                    description = safe_pdf_text(procedure['procedure_description'])
                     entry_height = -(-pdf.get_string_width(entry + ": " + description) // (box_width-7))
                     section_height += (entry_height - 1) * single_par_spacing + vertical_spacing
             
@@ -319,15 +358,14 @@ class ChecklistGenerator:
             pdf.set_fill_color(*color)
             pdf.rect(200, 0, 10, 297, 'F')  # Color band on the right for A4
             pdf.set_text_color(0, 0, 0)
-            pdf.set_font("OpenSans", size=font_size)
+            pdf.set_font("Helvetica", size=font_size)
             
             # Process sections
             for section in items:
                 section_height = vertical_spacing
-                filtered_procedures = self.filter_procedures(section['procedures'])
-                for procedure in filtered_procedures:
-                    entry = procedure['checklist_entry']
-                    description = procedure['procedure_description']
+                for procedure in section['procedures']:
+                    entry = safe_pdf_text(procedure['checklist_entry'])
+                    description = safe_pdf_text(procedure['procedure_description'])
                     entry_height = -(-pdf.get_string_width(entry + ": " + description) // (box_width-10))
                     section_height += (entry_height - 1) * single_par_spacing + vertical_spacing
 
@@ -340,29 +378,35 @@ class ChecklistGenerator:
                     pdf.set_fill_color(*color)
                     pdf.rect(200, 0, 10, 297, 'F')
                     pdf.set_text_color(0, 0, 0)
-                    pdf.set_font("OpenSans", size=font_size)
+                    pdf.set_font("Helvetica", size=font_size)
 
                 # Draw section box
                 pdf.rect(10, pdf.get_y(), box_width, section_height, 'D')
                 pdf.set_fill_color(*color)
                 pdf.rect(10, pdf.get_y(), box_width, vertical_spacing, 'F')
-                pdf.set_font("Montserrat-Medium", size=section_font_size)
+                pdf.set_font("Helvetica", style='B', size=section_font_size)
                 pdf.set_text_color(255, 255, 255)
-                pdf.cell(box_width, vertical_spacing, txt=section['section'], ln=True, align='C')
+                pdf.cell(box_width, vertical_spacing, txt=safe_pdf_text(section['section']), ln=True, align='C')
                 pdf.set_text_color(0, 0, 0)
-                pdf.set_font("OpenSans", size=font_size)
+                pdf.set_font("Helvetica", size=font_size)
                 
                 # Add procedures with descriptions
-                for procedure in filtered_procedures:
-                    entry = procedure['checklist_entry']
-                    description = procedure['procedure_description']
-                    pdf.set_font("OpenSans", size=font_size, style='B')
+                for procedure in section['procedures']:
+                    entry = safe_pdf_text(procedure['checklist_entry'])
+                    description = safe_pdf_text(procedure['procedure_description'])
+                    pdf.set_font("Helvetica", size=font_size, style='B')
                     pdf.write(single_par_spacing, f"{entry}: ")
-                    pdf.set_font("OpenSans", size=font_size)
+                    pdf.set_font("Helvetica", size=font_size)
                     pdf.write(single_par_spacing, description)
                     pdf.ln(vertical_spacing)
             
             pdf.ln(vertical_spacing)
+
+        if not rendered_any_content:
+            raise ValueError(
+                "No matching detailed procedures were found for this selection. "
+                "Try a different profile, operation, drone platform, or fleet size."
+            )
         
         # Output PDF
         output_path = os.path.join(output_folder, filename)
@@ -371,14 +415,36 @@ class ChecklistGenerator:
         return output_path
 
 
-def get_json_files(json_dir):
-    """Get all JSON files from the data directory in order."""
+def get_json_files(json_dir, assembly_dir=None, assembly_insert_before="03_first_flight.json"):
+    """Get JSON files in document order, with assembly inserted before first flight."""
     json_files = []
+
     if os.path.exists(json_dir):
         for filename in sorted(os.listdir(json_dir)):
             if filename.endswith('.json'):
                 json_files.append(os.path.join(json_dir, filename))
-    return json_files
+
+    if not assembly_dir or not os.path.exists(assembly_dir):
+        return json_files
+
+    assembly_files = []
+    for filename in sorted(os.listdir(assembly_dir)):
+        if filename.endswith('.json'):
+            assembly_files.append(os.path.join(assembly_dir, filename))
+
+    if not assembly_files:
+        return json_files
+
+    insert_index = None
+    for index, file_path in enumerate(json_files):
+        if os.path.basename(file_path) == assembly_insert_before:
+            insert_index = index
+            break
+
+    if insert_index is None:
+        return json_files + assembly_files
+
+    return json_files[:insert_index] + assembly_files + json_files[insert_index:]
 
 
 def main():
@@ -390,6 +456,7 @@ def main():
 Examples:
   %(prog)s --operation VLOS --drone DJI --count SINGLE
   %(prog)s -o BVLOS_NO_VO -d EBEE -c MULTIPLE
+    %(prog)s --profile wild --operation VLOS --drone DJI --count SINGLE
   %(prog)s --list-options
 
 Operation Types:
@@ -411,6 +478,10 @@ Number of Drones:
   SINGLE       - Single Drone
   MULTIPLE     - Multiple Drones
   SWARM        - Swarm of Drones
+
+Profiles:
+    wild         - bundled public procedures
+    template     - starter profile to copy and customize
         """
     )
     
@@ -432,11 +503,53 @@ Number of Drones:
     parser.add_argument('--list-options',
                         action='store_true',
                         help='List all available options and exit')
+
+    parser.add_argument('--list-profiles',
+                        action='store_true',
+                        help='List available procedure profiles and exit')
+
+    parser.add_argument('--create-profile',
+                        help='Create a new profile by copying an existing one and exit')
+
+    parser.add_argument('--from-profile',
+                        default='template',
+                        help='Source profile for --create-profile (default: template)')
+
+    parser.add_argument('--profile',
+                        default='wild',
+                        help='Procedure profile to use (default: wild)')
     
     parser.add_argument('--json-dir',
-                        help='Path to JSON data directory (default: ./data/json)')
+                        help='Override the JSON data directory for advanced use')
     
     args = parser.parse_args()
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    if args.list_profiles:
+        profiles = list_profiles(script_dir)
+        print("\nAvailable procedure profiles:")
+        for profile in profiles:
+            print(f"  - {profile}")
+        print()
+        return
+
+    if args.create_profile:
+        try:
+            created = create_profile(script_dir, args.create_profile, from_profile=args.from_profile)
+        except ValueError as error:
+            print(f"Error: {error}")
+            sys.exit(1)
+
+        print("\nProfile created:")
+        print(f"  Name: {args.create_profile}")
+        print(f"  Directory: {created['profile_dir']}")
+        print(f"  Edit constants: {created['constants_file']}")
+        print(f"  Edit procedures: {created['json_dir']}")
+        if os.path.isdir(created['assembly_dir']):
+            print(f"  Edit assembly: {created['assembly_dir']}")
+        print()
+        return
     
     if args.list_options:
         print("\nAvailable Options:")
@@ -452,23 +565,27 @@ Number of Drones:
         print()
         return
     
-    # Determine JSON directory
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    json_dir = args.json_dir if args.json_dir else os.path.join(script_dir, 'data/json')
-    
-    if not os.path.exists(json_dir):
-        print(f"Error: JSON data directory not found: {json_dir}")
-        print("Please ensure the 'data/json' folder exists with checklist JSON files.")
+    try:
+        resolved_paths = resolve_data_paths(
+            script_dir,
+            profile_name=args.profile,
+            json_dir_override=args.json_dir,
+        )
+    except ValueError as error:
+        print(f"Error: {error}")
         sys.exit(1)
-    
-    # Get JSON files
-    json_files = get_json_files(json_dir)
+
+    # Get JSON files from the selected profile.
+    # Assembly JSON is inserted before the first-flight phase so platform
+    # setup appears in the expected place within the generated documents.
+    json_files = get_json_files(resolved_paths['json_dir'], resolved_paths['assembly_dir'])
     
     if not json_files:
-        print(f"Error: No JSON files found in {json_dir}")
+        print(f"Error: No JSON files found in {resolved_paths['json_dir']}")
         sys.exit(1)
     
     print(f"\nGenerating checklists with:")
+    print(f"  Profile: {resolved_paths['profile_name']}")
     print(f"  Operation Type: {dict(OPERATION_TYPE_CHOICES)[args.operation]}")
     print(f"  Drone Platform: {dict(DRONE_PLATFORM_CHOICES)[args.drone]}")
     print(f"  Number of Drones: {dict(NUMBER_OF_DRONES_CHOICES)[args.count]}")

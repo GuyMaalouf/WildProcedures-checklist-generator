@@ -34,7 +34,7 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "If no more flights planned: Inform field safety officer",
+                    "checklist_entry": "If no more flights planned: Inform field safety contact",
                     "procedure_description": "If no more flights are planned.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],

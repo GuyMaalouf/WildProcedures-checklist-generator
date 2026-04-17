@@ -1,0 +1,37 @@
+{
+    "title": "Example Checklist",
+    "color": [40, 100, 160],
+    "items": [
+        {
+            "section": "Mission Setup",
+            "procedures": [
+                {
+                    "checklist_entry": "Mission objectives confirmed",
+                    "procedure_description": "Review mission intent, area boundaries, and success criteria with the full team.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Emergency contacts and response plan ready",
+                    "procedure_description": "Ensure local emergency numbers and escalation contacts are available to the operator.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "Flight Readiness",
+            "procedures": [
+                {
+                    "checklist_entry": "Aircraft, payload, and batteries inspected",
+                    "procedure_description": "Perform visual and functional checks on aircraft, payload, and power systems before launch.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["ALL"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}

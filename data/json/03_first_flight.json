@@ -51,8 +51,8 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Inform field safety officer of start of operations",
-                    "procedure_description": "Inform the field safety officer of the planned operation.",
+                    "checklist_entry": "Inform field safety contact of start of operations",
+                    "procedure_description": "Inform the field safety contact of the planned operation.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
@@ -171,6 +171,20 @@
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["MULTIPLE"]
+                },
+                {
+                    "checklist_entry": "No persistent warnings",
+                    "procedure_description": "Review the GCS message log and HUD. All pre-arm checks must be green. Investigate and resolve any persistent warnings before flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Start onboard recording",
+                    "procedure_description": "Confirm the onboard recording system (e.g. RPi camera) is actively recording before arming. Verify recording indicator is active.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["KU_GLIDER"],
+                    "number_of_drones": ["ALL"]
                 },
                 {
                     "checklist_entry": "'ARMING — TAKING OFF' — take off, maintain 1:1 height-distance",

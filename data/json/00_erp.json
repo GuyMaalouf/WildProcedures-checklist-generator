@@ -13,14 +13,14 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Contact radio room for medical response (+254 723 312 673)",
+                    "checklist_entry": "Contact radio room for medical response ([LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "Provide location (patrol block), injury nature, and casualty count.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Notify Field Safety Coordinator (Whatsapp: +61 419 707 026)",
+                    "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
                     "procedure_description": "First priority contact.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
@@ -39,14 +39,14 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Coordinate with conservancy authorities (+254 723 312 673)",
+                    "checklist_entry": "Coordinate with conservancy authorities ([LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "Contact the conservancy team to report and manage the incident.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Notify Field Safety Coordinator (Whatsapp: +61 419 707 026)",
+                    "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
                     "procedure_description": "Report the incident.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
@@ -72,15 +72,15 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Contact radio room for fire response (+254 723 312 673)",
+                    "checklist_entry": "Contact radio room for fire response ([LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "Report fire location (patrol block), size, and direction of spread.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Notify Field Safety Coordinator (Whatsapp: +61 419 707 026)",
-                    "procedure_description": "Call David Guerin and report the fire.",
+                    "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+                    "procedure_description": "Call the designated safety coordinator and report the fire.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
@@ -105,15 +105,15 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Coordinate with ATC (+254 116388564 - Admin: +254 798894005)",
+                    "checklist_entry": "Coordinate with ATC ([LOCAL_CONTACT_NUMBER]Admin: [LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "Provide: UAS type, last known location, altitude, speed, heading, and remaining battery.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Notify Field Safety Coordinator (Whatsapp: +61 419 707 026)",
-                    "procedure_description": "Call David Guerin without delay.",
+                    "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+                    "procedure_description": "Call the designated safety coordinator without delay.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
@@ -138,15 +138,15 @@
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Coordinate with ATC (+254 116388564 - Admin: +254 798894005)",
+                    "checklist_entry": "Coordinate with ATC ([LOCAL_CONTACT_NUMBER]Admin: [LOCAL_CONTACT_NUMBER])",
                     "procedure_description": "If third parties or property are affected, contact local authorities as directed by the Field Safety Coordinator.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]
                 },
                 {
-                    "checklist_entry": "Notify Field Safety Coordinator (Whatsapp: +61 419 707 026)",
-                    "procedure_description": "Call David Guerin and report the incident, location, and any third-party involvement.",
+                    "checklist_entry": "Notify Field Safety Coordinator (Designated Safety Coordinator)",
+                    "procedure_description": "Call the designated safety coordinator and report the incident, location, and any third-party involvement.",
                     "operation_types": ["ALL"],
                     "drone_platforms": ["ALL"],
                     "number_of_drones": ["ALL"]

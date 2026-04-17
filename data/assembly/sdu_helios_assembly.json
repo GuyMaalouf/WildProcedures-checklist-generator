@@ -1,0 +1,402 @@
+{
+    "title": "SDU Helios Assembly",
+    "color": [20, 100, 160],
+    "items": [
+        {
+            "section": "1. Fuselage Internal Assembly",
+            "procedures": [
+                {
+                    "checklist_entry": "MPPT is protected from battery balance lead",
+                    "procedure_description": "Ensure the mppt is covered so that the battery balance lead cannot touch it.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "GPS connector plugged",
+                    "procedure_description": "Confirm the GPS module connector is fully seated and the GPS mast or mount is secure.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "All internal connectors connected, and no loose wires",
+                    "procedure_description": "All wires routed from the board are secured and cannot contact rotating parts or snag during flight.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Board fully inserted",
+                    "procedure_description": "Confirm the electronics board is fixed to the airframe with no rocking or vibration play.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Close fuselage, and ensure fuselage screws are tight",
+                    "procedure_description": "Verify all fuselage screws are tightened to the specified torque value.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "ESC connected to motor (colour-to-colour)",
+                    "procedure_description": "Verify all three phase wires between ESC and motor are connected and matched colour-to-colour to ensure correct motor rotation direction.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "2. Boom Assembly",
+            "procedures": [
+                {
+                    "checklist_entry": "Tail boom attached to fuselage",
+                    "procedure_description": "Insert the tail boom fully into the fuselage socket until it bottoms out. No gap should be visible at the interface.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Boom screw tightened",
+                    "procedure_description": "Torque the retention screw(s) at the fuselage–boom interface to the specified value. Confirm no rotation or pull-out under firm hand pressure.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "No cracks at fuselage–boom interface",
+                    "procedure_description": "Inspect the fuselage socket and boom tube for visible cracks or delamination before and after tightening.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "No pinched wires at boom interface",
+                    "procedure_description": "Before seating the boom fully, confirm all tail servo wiring is routed through or alongside the boom without being pinched in the joint.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "3. Wing Assembly",
+            "procedures": [
+                {
+                    "checklist_entry": "Wings fully seated and locked",
+                    "procedure_description": "Insert each wing panel until the root seats flush against the fuselage. Confirm retention pins or latches are engaged.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Telemetry antenna mounted",
+                    "procedure_description": "Confirm the telemetry radio connector is fully mated. Verify antenna is attached and correctly oriented.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "ELRS antennas correctly oriented",
+                    "procedure_description": "Position ELRS antennas per the installation guide (typically one horizontal, one vertical, or both angled at 90° to each other) for optimal link diversity.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Airspeed sensor secured",
+                    "procedure_description": "Confirm the airspeed sensor is securely mounted and all connectors are fully mated.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Main wing connectors connected",
+                    "procedure_description": "Mate the aileron servo connector at the wing root for each wing. Confirm fully seated and locked.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "4. Tail Assembly",
+            "procedures": [
+                {
+                    "checklist_entry": "Tail installed",
+                    "procedure_description": "Attach the horizontal stabiliser and fin per the tail assembly procedure. Confirm all attachment points are engaged.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Tail servo connectors attached",
+                    "procedure_description": "Attach the horizontal stabiliser and fin per the tail assembly procedure. Confirm all attachment points are engaged.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "5. Wingtip Assembly",
+            "procedures": [
+                {
+                    "checklist_entry": "Wingtips installed",
+                    "procedure_description": "Attach both wingtips to the outboard wing panels and confirm connectors inside the joint are mated before closing.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Solar connectors & servos connected at wing tips",
+                    "procedure_description": "Pass the solar panel wiring through the designated root channel. Confirm connectors are accessible and not kinked or strained.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Wingtip joints taped",
+                    "procedure_description": "Apply securing tape over both wingtip joints to prevent in-flight separation.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "6. Structural Inspection",
+            "procedures": [
+                {
+                    "checklist_entry": "No major cracks, dents, or deformation (fuselage, wings, tail)",
+                    "procedure_description": "Perform a full visual inspection of all structural surfaces. Pay attention to high-stress areas: wing roots, spar tubes, tail boom join, and motor mount.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Hinges intact and secure",
+                    "procedure_description": "Check all control surface hinges for cracks, delamination, or missing material. Surfaces should pivot without any rocking perpendicular to the hinge line.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "No excessive play in linkages",
+                    "procedure_description": "Hold each control surface and check for free play at the horn, clevis, and pushrod connections. Correct any play exceeding the maintenance manual limit.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "7. Propulsion and Payload Inspection",
+            "procedures": [
+                {
+                    "checklist_entry": "Motor securely mounted (no cracks in motor mount)",
+                    "procedure_description": "Attempt to rock the motor by hand. No movement should be detectable at the mount plate. Check for fretting marks or loose fasteners.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Propeller secure and undamaged",
+                    "procedure_description": "Inspect blade faces for cracks, nicks, or delamination. Confirm prop is seated flush on the shaft and the retaining nut is torqued correctly.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Camera view clear of obstruction",
+                    "procedure_description": "Inspect the motor mount plate and surrounding structure for cracks, particularly around fastener holes.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "8. Solar Panel Check",
+            "procedures": [
+                {
+                    "checklist_entry": "No major damage on solar panels",
+                    "procedure_description": "Inspect all panel surfaces for cracked cells, deep scratches, or delamination of the encapsulant. Minor surface marks are acceptable; structural damage is not.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Wings wiped clean (dust removed)",
+                    "procedure_description": "Wipe the solar panel surface with a clean dry cloth to remove dust and debris that would reduce power generation.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "9. Battery and CG Check",
+            "procedures": [
+                {
+                    "checklist_entry": "Battery lead is isolated (prevent short circuit)",
+                    "procedure_description": "With all personnel clear of the propeller arc, connect the main flight battery. Stand by for autopilot boot sequence.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Battery installed in fuselage",
+                    "procedure_description": "Place the flight battery (and any payload) in their intended positions before performing the CG check. Do not connect power yet.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "CG within acceptable range",
+                    "procedure_description": "Balance the aircraft at the CG datum points. Adjust battery position fore or aft as required until CG falls within the published limits.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "10. Power-Up Sequence",
+            "procedures": [
+                {
+                    "checklist_entry": "RC transmitter ON",
+                    "procedure_description": "Power on the RC transmitter first and confirm the correct model profile is loaded and throttle is at minimum.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Kill switch ON (safety active)",
+                    "procedure_description": "Activate the kill switch to the safe position before connecting power, ensuring the motor cannot spin during power-up.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Plug in battery",
+                    "procedure_description": "With all personnel clear of the propeller arc, connect the main flight battery. Stand by for autopilot boot sequence.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "11. Link and Telemetry Check",
+            "procedures": [
+                {
+                    "checklist_entry": "Telemetry connected and GCS receiving data",
+                    "procedure_description": "Confirm the GCS telemetry link is active and parameters are streaming. No long gaps or timeout warnings.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "RSSI acceptable",
+                    "procedure_description": "Check RC link RSSI on the GCS or transmitter. Signal must be above the minimum acceptable threshold defined in the SOP.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Battery voltage reading correct",
+                    "procedure_description": "Confirm the GCS shows the expected battery voltage for the state of charge. Cross-check against a cell voltage reading if available.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "GPS lock confirmed",
+                    "procedure_description": "Wait for a stable 3D GPS fix with HDOP below 1.5 and at least 10 satellites. Confirm home position is set at the launch point.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Flight modes correct",
+                    "procedure_description": "Cycle through each mode switch position on the transmitter and confirm the GCS reports the expected flight modes as defined in the mission plan.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Failsafes configured",
+                    "procedure_description": "Verify RC loss failsafe and GCS disconnect failsafe are set to the approved actions (e.g. RTL, loiter, or continue mission) consistent with the OpSpec.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        },
+        {
+            "section": "12. Control Surfaces and MPPT Check",
+            "procedures": [
+                {
+                    "checklist_entry": "Disable GPS safety switch",
+                    "procedure_description": "With transmitter sticks centred and autopilot initialised, confirm elevator, rudder, and ailerons are at or very close to neutral. Adjust trims or subtrim as needed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Control surfaces centred at neutral",
+                    "procedure_description": "With transmitter sticks centred and autopilot initialised, confirm elevator, rudder, and ailerons are at or very close to neutral. Adjust trims or subtrim as needed.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Correct movement direction (MANUAL mode)",
+                    "procedure_description": "In MANUAL mode apply each stick input and verify correct surface response: pull back = elevator up; right rudder = rudder right; right stick = right aileron up / left aileron down.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Fly-by-wire movement correct (FBWA mode)",
+                    "procedure_description": "Switch to FBWA and physically bank/pitch the airframe. Autopilot must deflect surfaces to oppose the movement: roll right = left aileron up; pitch nose up = elevator down.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Smooth, full deflection — no binding",
+                    "procedure_description": "Sweep each surface through its full travel. Movement must be smooth throughout the range with no buzzing, binding, or mid-travel resistance.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "No slip in control rod linkage",
+                    "procedure_description": "With servos active, apply firm hand pressure to each control surface. No movement should occur — any deflection indicates a slipping servo horn, loose clevis, or worn linkage.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "MPPT showing expected behaviour",
+                    "procedure_description": "Confirm the MPPT controller is powered and reporting on the GCS or dedicated monitoring interface.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                },
+                {
+                    "checklist_entry": "Thrust test",
+                    "procedure_description": "Confirm the MPPT controller is powered and reporting on the GCS or dedicated monitoring interface.",
+                    "operation_types": ["ALL"],
+                    "drone_platforms": ["SDU_HELIOS"],
+                    "number_of_drones": ["ALL"]
+                }
+            ]
+        }
+    ]
+}
