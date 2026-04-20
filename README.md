@@ -4,6 +4,8 @@ Generate operation-specific drone checklists and procedure manuals as PDFs.
 
 The repository ships with a sanitized public dataset and a starter template so teams can either use the bundled procedures or copy them into their own profile and customize from there.
 
+<img width="1200" height="1200" alt="wildprocedures_revised_linkedin_graphic" src="https://github.com/user-attachments/assets/4c81050d-4611-4193-8be7-5d2ac9c52844" />
+
 ## What You Get
 
 - A compact A5 checklist PDF for field use
