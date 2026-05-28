@@ -143,3 +143,29 @@ None.
 - Continue monitoring AI networking and power/cooling names for valuation pullbacks.
 - Monitor long-duration Hormuz disruption impacts on LNG, fertiliser, shipping, and infrastructure spending.
 - Reassess grid and electrification beneficiaries if broader macro weakness creates better entry points.
+
+## 2026-05-27 — Daily broad trigger scan
+
+| Field | Value |
+|---|---|
+| Scan type | Daily broad trigger scan |
+| Universe size | Broad repo universe, focused on US-listed and ADR names with current earnings/news-driven dislocations |
+| Triggered names | ZS |
+| Surfaced alerts | None |
+| Repo updated | yes |
+| Notes | Zscaler triggered Deep Review after a large post-earnings sell-off. No buy alert was surfaced because the sell-off was linked to weaker guidance, sales-leadership disruption, slower expected FY2027 growth, and execution uncertainty. |
+
+### Summary
+
+No high-conviction buy alert surfaced. Zscaler was the only new candidate worth logging because the price move was large and the company remains strategically relevant within cybersecurity, SASE, zero trust, and AI-security themes. However, the opportunity does not yet meet the deep-conviction threshold because the guidance and sales-execution issues may indicate more than a temporary market overreaction.
+
+### Candidate log updates
+
+- Added ZS — Deep Review.
+- Confirmed ZS ticker-map classification.
+
+### Follow-up
+
+- Compare ZS forward EV/sales, free-cash-flow yield, and growth durability against PANW, CRWD, NET and FTNT.
+- Recheck whether sales-leadership replacements and new-logo growth stabilise.
+- Review next quarter guidance and AI-security ARR contribution before any escalation.
